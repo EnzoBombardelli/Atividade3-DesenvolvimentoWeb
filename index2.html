@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Sacola - LabyrinKx.BR</title>
+    <title>Meu Carrinho - LabyrinKx.BR</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
@@ -15,58 +14,58 @@
 
     <div class="cart-drawer">
         
-        <div class="cart-header">
+        <div class="headerCarrinho">
             <h2>Minha Sacola</h2>
-            <a href="index.html" class="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            <a href="index.html" class="BotaoFechar"><i class="fa-solid fa-xmark"></i></a>
         </div>
 
-        <div class="cart-items">
-            <div class="cart-item">
-                <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="ItensCarrinho">
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
                 <img src="https://placehold.co/100x100/e2e8f0/1e293b?text=Dunk+Marrom" alt="Tênis">
-                <div class="item-info">
+                <div class="InformacoesItem">
                     <h3>Tênis Nike Dunk Sb Low Pro Marrom</h3>
                     <p>TAMANHO: <span>39</span></p>
-                    <div class="item-prices">
-                        <span class="old-price">R$ 999,90</span>
-                        <span class="new-price">R$ 599,94</span>
+                    <div class="PrecosItem">
+                        <span class="PrecoAntigo">R$ 999,90</span>
+                        <span class="PrecoNovo">R$ 599,94</span>
                     </div>
                 </div>
-                <div class="quantity-control">
+                <div class="Quantidade">
                     <button>-</button>
                     <span>1</span>
                     <button>+</button>
                 </div>
             </div>
 
-            <div class="cart-item">
-                <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
                 <img src="https://placehold.co/100x100/e2e8f0/1e293b?text=Jordan+1+Preto" alt="Tênis">
-                <div class="item-info">
+                <div class="InformacoesItem">
                     <h3>Tênis Nike Air Jordan 1 Low Preto</h3>
                     <p>TAMANHO: <span>45</span></p>
-                    <div class="item-prices">
-                        <span class="new-price">R$ 1.099,90</span>
+                    <div class="PrecosItem">
+                        <span class="PrecoNovo">R$ 1.099,90</span>
                     </div>
                 </div>
-                <div class="quantity-control">
+                <div class="Quantidade">
                     <button>-</button>
                     <span>1</span>
                     <button>+</button>
                 </div>
             </div>
 
-            <div class="cart-item">
-                <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
                 <img src="https://placehold.co/100x100/e2e8f0/1e293b?text=AF1+Bege" alt="Tênis">
-                <div class="item-info">
+                <div class="InformacoesItem">
                     <h3>Tenis Nike Air Force 1 07 Bege</h3>
                     <p>TAMANHO: <span>38</span></p>
-                    <div class="item-prices">
-                        <span class="new-price">R$ 999,90</span>
+                    <div class="PrecosItem">
+                        <span class="PrecoNovo">R$ 999,90</span>
                     </div>
                 </div>
-                <div class="quantity-control">
+                <div class="Quantidade">
                     <button>-</button>
                     <span>1</span>
                     <button>+</button>
@@ -74,25 +73,17 @@
             </div>
         </div>
 
-        <div class="cart-footer">
-            <div class="divider"></div>
+        <div class="footerCarrinho">
+            <div class="Divisoria"></div>
             
-            <p class="free-shipping">Parabéns, você ganhou <span>FRETE GRÁTIS!</span></p>
-            
-            <div class="shipping-calc">
-                <label>Calcule o Frete:</label>
-                <div class="input-wrapper">
-                    <input type="text" placeholder="00000-000">
-                    <button><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
+            <p class="FreteGratis">Parabéns, você ganhou <span>FRETE GRÁTIS!</span></p>
+
+            <div class="LinhaTotal">
+                <span class="FraseTotal">Total a pagar:</span>
+                <span class="NumeroTotal">R$ 2.699,74</span>
             </div>
 
-            <div class="total-row">
-                <span class="total-label">Total a pagar:</span>
-                <span class="total-value">R$ 2.699,74</span>
-            </div>
-
-            <button class="checkout-btn">Finalizar Compra</button>
+            <button class="BotaoFinalizarCompra">Finalizar Compra</button>
         </div>
     </div>
 </body>

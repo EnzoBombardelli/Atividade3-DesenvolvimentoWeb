@@ -1,27 +1,27 @@
 /* Tabela de cores */
 :root {
-    --bg-body: #fcfcfc;
-    --bg-white: #ffffff;
-    --text-dark: #111827;
-    --text-muted: #6b7280;
-    --border-color: #e5e7eb;
-    --green-bg: #f0fdf4;
-    --green-text: #16a34a;
-    --footer-bg: #181818;
-    --footer-text: #d1d5db;
+    --FundoBody: #fcfcfc;
+    --FundoBranco: #ffffff;
+    --TextoPreto: #111827;
+    --TextoCinza: #6b7280;
+    --CorDaBorda: #e5e7eb;
+    --FundoVerde: #f0fdf4;
+    --TextoVerde: #16a34a;
+    --FundoFooter: #181818;
+    --TextoFooter: #d1d5db;
 }
 
 /* Reset(não mexer) */
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: var(--bg-body);
-    color: var(--text-dark);
+    background-color: var(--FundoBody);
+    color: var(--TextoPreto);
     overflow-x: hidden;
 }
 
@@ -30,79 +30,441 @@ a {
     color: inherit;
 }
 
-.container {
+/* Tamanho geral(não mexer)*/
+.HeaderMainFooter {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* HEADER */
-.header { background-color: var(--bg-white); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 30; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.header-content { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-.logo { font-size: 30px; font-weight: 900; letter-spacing: -1px; cursor: pointer; }
-.logo span { color: #9ca3af; }
-.desktop-nav { display: flex; gap: 30px; align-items: center; }
-.desktop-nav a { font-size: 14px; font-weight: 500; color: var(--text-dark); transition: color 0.2s; }
-.desktop-nav a:hover { color: var(--text-muted); }
-.nav-sale { background-color: var(--text-dark); color: var(--bg-white) !important; padding: 4px 12px; border-radius: 4px; }
-.header-icons { display: flex; gap: 24px; align-items: center; }
-.icon-btn, .cart-btn { background: none; border: none; font-size: 20px; color: #4b5563; cursor: pointer; position: relative; transition: color 0.2s; }
-.icon-btn:hover, .cart-btn:hover { color: var(--text-dark); }
-.cart-badge { position: absolute; top: -5px; right: -8px; background-color: #dc2626; color: white; font-size: 10px; font-weight: bold; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid white; }
+/* Header */
+.header {
+    background-color: var(--FundoBranco);
+    border-bottom: 1px solid var(--CorDaBorda);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
 
-/* MAIN & BRANDS */
-.main-content { padding-top: 32px; padding-bottom: 64px; }
-.brands-section { border-bottom: 1px solid var(--border-color); padding-bottom: 32px; margin-bottom: 48px; }
-.brands-row { display: flex; justify-content: space-between; align-items: center; overflow-x: auto; padding: 16px 8px; opacity: 0.7; transition: opacity 0.3s; }
-.brands-row:hover { opacity: 1; }
-.brands-row a { transition: transform 0.2s; }
-.brands-row a:hover { transform: scale(1.05); }
-.brand-nike { font-size: 30px; font-weight: 900; font-style: italic; letter-spacing: -1px; }
-.brand-obey { font-size: 24px; font-weight: bold; font-family: serif; text-transform: uppercase; }
-.brand-nb { font-size: 30px; font-weight: bold; letter-spacing: -1px; }
-.brand-bape { font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
-.brand-adidas { font-size: 24px; font-weight: bold; text-transform: lowercase; letter-spacing: -1px; }
-.brand-icon { font-size: 30px; }
-.brand-parra { font-size: 24px; font-weight: bold; font-family: serif; font-style: italic; }
+.headerConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
 
-/* PRODUCTS GRID */
-.section-title { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; }
-.section-title h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
-.view-all { font-size: 14px; font-weight: 500; color: var(--text-muted); }
-.view-all:hover { color: var(--text-dark); }
-.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; }
-.product-card { background-color: var(--bg-white); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.3s, transform 0.3s; }
-.product-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); transform: translateY(-2px); }
-.product-image { position: relative; height: 250px; background-color: #f6f6f6; display: flex; justify-content: center; align-items: center; padding: 24px; }
-.product-image img { max-height: 100%; object-fit: contain; mix-blend-mode: multiply; transition: transform 0.5s; }
-.product-card:hover .product-image img { transform: scale(1.05); }
-.heart-btn { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 20px; color: #9ca3af; cursor: pointer; z-index: 10; transition: color 0.2s; }
-.heart-btn:hover { color: #ef4444; }
-.sold-badge { position: absolute; bottom: 16px; left: 16px; background: rgba(255,255,255,0.9); backdrop-filter: blur(4px); padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; color: #374151; border: 1px solid var(--border-color); box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.product-info { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.product-info h3 { font-size: 14px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; }
-.status { font-size: 12px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; }
-.pricing { margin-top: auto; display: flex; flex-direction: column; }
-.price-pix { font-size: 18px; font-weight: 900; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
-.tag-pix { font-size: 12px; font-weight: 400; color: var(--green-text); background-color: var(--green-bg); padding: 2px 6px; border-radius: 4px; }
-.price-installments { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.Logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.Logo span {
+    color: #9ca3af;
+}
+
+.BotoesNav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.BotoesNav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--TextoPreto);
+    transition: color 0.2s;
+}
+
+.BotoesNav a:hover {
+    color: var(--TextoCinza);
+}
+
+.Sale {
+    background-color: var(--TextoPreto);
+    color: var(--FundoBranco) !important;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.headerIcones {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.BotoesIcones,
+.BotaoCarrinho {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #4b5563;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.BotoesIcones:hover,
+.BotaoCarrinho:hover {
+    color: var(--TextoPreto);
+}
+
+.QuantidadeCarrinho {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #dc2626;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Main e Logos */
+.ConteudoPrincipal {
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.SecaoDeMarcas {
+    border-bottom: 1px solid var(--CorDaBorda);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+}
+
+.BarraDeLogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+    padding: 16px 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.BarraDeLogos:hover {
+    opacity: 1;
+}
+
+.BarraDeLogos a {
+    transition: transform 0.2s;
+}
+
+.BarraDeLogos a:hover {
+    transform: scale(1.05);
+}
+
+.LogoNike {
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+.LogoObey {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: serif;
+    text-transform: uppercase;
+}
+
+.LogoNb {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.LogoBape {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.LogoAdidas {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+}
+
+.LogoIcon {
+    font-size: 30px;
+}
+
+.LogoParra {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: serif;
+    font-style: italic;
+}
+
+/* Grid dos Tênis */
+.TituloDaSecao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.TituloDaSecao h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.VerTodos {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--TextoCinza);
+}
+
+.VerTodos:hover {
+    color: var(--TextoPreto);
+}
+
+.GridTenis {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.CardsTenis {
+    background-color: var(--FundoBranco);
+    border: 1px solid var(--CorDaBorda);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.CardsTenis:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.ImagensTenis {
+    position: relative;
+    height: 250px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.ImagensTenis img {
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.5s;
+}
+
+.CardsTenis:hover .ImagensTenis img {
+    transform: scale(1.05);
+}
+
+.BotaFavoritar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #9ca3af;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+
+.BotaFavoritar:hover {
+    color: #ef4444;
+}
+
+.ContagemVendas {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    border: 1px solid var(--CorDaBorda);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.InformacoesTenis {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.InformacoesTenis h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.Estado {
+    font-size: 12px;
+    color: var(--TextoCinza);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.Precos {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.PrecoCheio {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--TextoPreto);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.DescontoPix {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--TextoVerde);
+    background-color: var(--FundoVerde);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.PrecoParcelado {
+    font-size: 12px;
+    color: var(--TextoCinza);
+    margin-top: 2px;
+}
 
 /* FOOTER */
-.footer { background-color: var(--footer-bg); color: var(--footer-text); padding: 64px 0 32px 0; }
-.footer-logo { font-size: 36px; font-family: serif; color: var(--bg-white); letter-spacing: -1px; margin-bottom: 48px; }
-.footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 32px; margin-bottom: 48px; border-bottom: 1px solid #374151; padding-bottom: 48px; }
-.footer-col h4 { color: var(--bg-white); font-weight: 700; margin-bottom: 16px; font-size: 14px; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 8px; }
-.footer-col a { font-size: 14px; transition: color 0.2s; }
-.footer-col a:hover { color: var(--bg-white); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #9ca3af; flex-wrap: wrap; gap: 24px; }
-.footer-region { display: flex; align-items: center; gap: 16px; }
-.theme-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid #4b5563; background: none; color: white; cursor: pointer; transition: background 0.2s; }
-.theme-btn:hover { background-color: #374151; }
-.region-selector { border: 1px solid #4b5563; padding: 6px 16px; border-radius: 999px; color: var(--bg-white); cursor: pointer; transition: background 0.2s; }
-.region-selector:hover { background-color: #374151; }
-.footer-socials { display: flex; gap: 16px; font-size: 18px; }
-.footer-socials a:hover { color: var(--bg-white); }
-.footer-legal { display: flex; gap: 16px; }
-.footer-legal a:hover { color: var(--bg-white); }
+.footer {
+    background-color: var(--FundoFooter);
+    color: var(--TextoFooter);
+    padding: 64px 0 32px 0;
+}
+
+.footerLogo {
+    font-size: 36px;
+    font-family: serif;
+    color: var(--FundoBranco);
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 48px;
+}
+
+.footerColuna h4 {
+    color: var(--FundoBranco);
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.footerColuna ul {
+    list-style: none;
+}
+
+.footerColuna ul li {
+    margin-bottom: 8px;
+}
+
+.footerColuna a {
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footerColuna a:hover {
+    color: var(--FundoBranco);
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #9ca3af;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.FooterRegiaoTema {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.BotaoTema {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #4b5563;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.BotaoTema:hover {
+    background-color: #374151;
+}
+
+.SeletorDeRgiao {
+    border: 1px solid #4b5563;
+    padding: 6px 16px;
+    border-radius: 999px;
+    color: var(--FundoBranco);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.SeletorDeRgiao:hover {
+    background-color: #374151;
+}
+
+.footerInstagram {
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.footerInstagram a:hover {
+    color: var(--FundoBranco);
+}
+
+.footerCopyrigth {
+    display: flex;
+    gap: 16px;
+}
+
+.footerCopyrtigth a:hover {
+    color: var(--FundoBranco);
+}

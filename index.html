@@ -1,91 +1,284 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Kicks - Loja de Sneakers</title>
+    <title>LabyrinKx.BR - Loja de Sneakers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Jordan Kicks</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Loja</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-            </ul>
-        </nav>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">LabyrinKx<span>.BR</span></div>
+
+            <nav class="desktop-nav">
+                <a href="#">Tênis</a>
+                <a href="#">Roupas</a>
+                <a href="#">Acessórios</a>
+                <a href="#" class="nav-sale">Sale</a>
+            </nav>
+
+            <div class="header-icons">
+                <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+                <a href="index2.html" class="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>A Cultura Sneaker Vive Aqui</h2>
-            <p>Os modelos mais exclusivos da linha Air Jordan.</p>
+    <main class="container main-content">
+        <section class="brands-section">
+            <div class="brands-row">
+                <a href="#" class="brand-nike">NIKE</a>
+                <a href="#" class="brand-obey">Obey</a>
+                <a href="#" class="brand-nb">NB</a>
+                <a href="#" class="brand-bape">BAPE</a>
+                <a href="#" class="brand-adidas">adidas</a>
+                <a href="#" class="brand-icon"><i class="fa-solid fa-person-walking"></i></a>
+                <a href="#" class="brand-parra">Parra</a>
+            </div>
         </section>
 
-        <section class="container-produtos">
-            <h2>Lançamentos e Clássicos</h2>
-            
-            <div class="grid-produtos">
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1597045566677-8cf039d7f6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 1 High Chicago">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 1 High "Chicago"</h3>
-                        <p>O clássico absoluto que começou tudo. Cores originais da temporada de estreia de MJ.</p>
-                        <a href="#" class="btn-comprar">R$ 1.299,00 - Comprar</a>
-                    </div>
-                </article>
+        <div class="section-title">
+            <h2>Trending Sneakers</h2>
+            <a href="#" class="view-all">Ver Todos →</a>
+        </div>
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 4 Retro Bred">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 4 Retro "Bred"</h3>
-                        <p>Design icônico com tela lateral e o lendário logo Nike Air no calcanhar.</p>
-                        <a href="#" class="btn-comprar">R$ 1.499,00 - Comprar</a>
-                    </div>
-                </article>
+        <section class="products-grid">
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1574878649830-745a16d01bd0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 3 Retro Black Cement">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 3 "Black Cement"</h3>
-                        <p>O primeiro a apresentar o logo Jumpman e a inconfundível estampa de elefante.</p>
-                        <a href="#" class="btn-comprar">R$ 1.399,00 - Comprar</a>
+            <div class="product-card">
+                <div class="product-image">
+                    <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+1" alt="Nike Mind 001">
+                    <span class="sold-badge">4215 sold</span>
+                </div>
+                <div class="product-info">
+                    <h3>Nike Mind 001 Slide Black Chrome</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing">
+                        <span class="price-pix">R$ 949,05 <span class="tag-pix">no PIX (-5%)</span></span>
+                        <span class="price-installments">ou 10x de R$ 99,90</span>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1552346154-21d32810baa3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 11 Concord">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 11 "Concord"</h3>
-                        <p>Elegância em quadra. Couro envernizado que revolucionou o design de tênis de basquete.</p>
-                        <a href="#" class="btn-comprar">R$ 1.599,00 - Comprar</a>
+            <div class="product-card">
+                <div class="product-image">
+                    <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+2" alt="Jordan 4">
+                    <span class="sold-badge">1254 sold</span>
+                </div>
+                <div class="product-info">
+                    <h3>Jordan 4 Retro Toro Bravo (2026)</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing">
+                        <span class="price-pix">R$ 1.567,50 <span class="tag-pix">no PIX (-5%)</span></span>
+                        <span class="price-installments">ou 10x de R$ 165,00</span>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1521774971864-62e842046145?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 1 Low Travis Scott">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 1 Low "Mocha"</h3>
-                        <p>Versatilidade em cano baixo com tons terrosos perfeitos para o estilo streetwear moderno.</p>
-                        <a href="#" class="btn-comprar">R$ 999,00 - Comprar</a>
+            <div class="product-card">
+                <div class="product-image">
+                    <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+3" alt="Jordan 3">
+                    <span class="sold-badge">893 sold</span>
+                </div>
+                <div class="product-info">
+                    <h3>Jordan 3 Retro True Blue (2026)</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing">
+                        <span class="price-pix">R$ 1.453,50 <span class="tag-pix">no PIX (-5%)</span></span>
+                        <span class="price-installments">ou 10x de R$ 153,00</span>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1603787081151-cbebeef20092?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Air Jordan 5 Retro Fire Red">
-                    <div class="card-conteudo">
-                        <h3>Air Jordan 5 "Fire Red"</h3>
-                        <p>Inspirado em aviões de caça, possui língua refletiva e detalhes agressivos na entressola.</p>
-                        <a href="#" class="btn-comprar">R$ 1.349,00 - Comprar</a>
-                    </div>
-                </article>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+4" alt="Birkenstock"><span
+                        class="sold-badge">3120 sold</span></div>
+                <div class="product-info">
+                    <h3>Birkenstock Boston Soft Footbed Suede</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 807,50 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 85,00</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+5" alt="Jordan 1"><span
+                        class="sold-badge">4510 sold</span></div>
+                <div class="product-info">
+                    <h3>Jordan 1 Retro Low OG SP Travis Scott</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 4.032,75 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 424,50</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+6" alt="YZY"><span
+                        class="sold-badge">920 sold</span></div>
+                <div class="product-info">
+                    <h3>YZY YS-01 Cream</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 1.244,50 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 131,00</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+7" alt="Dunk"><span
+                        class="sold-badge">1999 sold</span></div>
+                <div class="product-info">
+                    <h3>Nike Dunk Low Retro White Black</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 854,99 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 89,99</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+8" alt="New Balance"><span
+                        class="sold-badge">654 sold</span></div>
+                <div class="product-info">
+                    <h3>New Balance 9060 Sea Salt</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 1.139,90 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 119,99</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+9" alt="Adidas Samba"><span
+                        class="sold-badge">3890 sold</span></div>
+                <div class="product-info">
+                    <h3>Adidas Samba OG Cloud White</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 759,99 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 79,99</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+10" alt="Asics"><span
+                        class="sold-badge">811 sold</span></div>
+                <div class="product-info">
+                    <h3>Asics Gel-Kayano 14 Cream Black</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 1.044,05 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 109,90</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+11" alt="Air Max"><span
+                        class="sold-badge">421 sold</span></div>
+                <div class="product-info">
+                    <h3>Nike Air Max Plus Drift Phantom</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 1.234,90 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 129,99</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><button class="heart-btn"><i class="fa-regular fa-heart"></i></button><img
+                        src="https://placehold.co/400x300/f6f6f6/333?text=Sneaker+12" alt="Jordan 11"><span
+                        class="sold-badge">1011 sold</span></div>
+                <div class="product-info">
+                    <h3>Jordan 11 Retro Cherry</h3>
+                    <p class="status">New & Verified</p>
+                    <div class="pricing"><span class="price-pix">R$ 1.804,05 <span class="tag-pix">no PIX
+                                (-5%)</span></span><span class="price-installments">ou 10x de R$ 189,90</span></div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Jordan Kicks. Projeto Acadêmico HTML & CSS.</p>
-    </footer>
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">LabyrinKx.</h2>
 
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Air Jordan</h4>
+                    <ul>
+                        <li><a href="#">Air Jordan 1</a></li>
+                        <li><a href="#">Air Jordan 3</a></li>
+                        <li><a href="#">Air Jordan 4</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Adidas</h4>
+                    <ul>
+                        <li><a href="#">Adidas Yeezy</a></li>
+                        <li><a href="#">Yeezy Slides</a></li>
+                        <li><a href="#">adidas Samba</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>New Balance</h4>
+                    <ul>
+                        <li><a href="#">New Balance 1906R</a></li>
+                        <li><a href="#">New Balance 530</a></li>
+                        <li><a href="#">New Balance 9060</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nike</h4>
+                    <ul>
+                        <li><a href="#">Air Force 1</a></li>
+                        <li><a href="#">Air Max</a></li>
+                        <li><a href="#">Nike Dunk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Apparel</h4>
+                    <ul>
+                        <li><a href="#">Supreme</a></li>
+                        <li><a href="#">BAPE</a></li>
+                        <li><a href="#">Travis Scott</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-region">
+                    <button class="theme-btn"><i class="fa-regular fa-sun"></i></button>
+                    <div class="region-selector">
+                        <span>Region</span> | <span>English</span> | <span>$ USD</span>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Termos</a>
+                    <a href="#">Privacidade</a>
+                    <span>© 2026 LabyrinKx.BR. Todos os direitos reservados.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

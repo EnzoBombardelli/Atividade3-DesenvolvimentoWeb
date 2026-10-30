@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- 
+    ========================================================
+    Nomes dos Alunos: 
+    1. [NOME COMPLETO DO ALUNO 1 AQUI]
+    2. [NOME COMPLETO DO ALUNO 2 AQUI]
+    ========================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Jordan Kicks</title>
+    <style>
+        /* Reutilizando as variáveis e estilos base para coerência visual */
+        :root {
+            --cor-fundo: #f4f4f4;
+            --cor-texto: #333;
+            --cor-destaque: #e3000f;
+            --cor-branco: #ffffff;
+            --cor-preto: #111111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--cor-preto);
+            color: var(--cor-branco);
+            padding: 20px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            color: var(--cor-destaque);
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--cor-branco);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* CONTEÚDO SOBRE - FLEXBOX */
+        main {
+            flex-grow: 1; /* Empurra o footer para baixo */
+        }
+
+        .sobre-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: var(--cor-branco);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex; /* Flexbox */
+            gap: 40px;
+            align-items: center; /* Alinhamento vertical */
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .sobre-texto {
+            flex: 1;
+        }
+
+        .sobre-texto h2 {
+            color: var(--cor-destaque);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .sobre-texto p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify; /* Alinhamento de texto */
+        }
+
+        .sobre-imagem {
+            flex: 1;
+        }
+
+        .sobre-imagem img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: var(--cor-preto);
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .sobre-container {
+                flex-direction: column; /* Empilha no mobile */
+                margin: 20px;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jordan Kicks</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Loja</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sobre-container">
+            <div class="sobre-texto">
+                <h2>Nossa História</h2>
+                <p>Fundada em 2026, a <strong>Jordan Kicks</strong> nasceu da paixão pela cultura Sneakerhead. Nós não vendemos apenas tênis, nós entregamos história, arte e estilo de vida em forma de calçados.</p>
+                <p>Nossa missão é garantir que cada cliente tenha acesso aos modelos mais exclusivos e icônicos da linha Air Jordan, garantindo 100% de autenticidade e o melhor atendimento do Brasil.</p>
+            </div>
+            <div class="sobre-imagem">
+                <img src="https://images.unsplash.com/photo-1616124619460-ff4ed8f4683c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coleção de Tênis Jordan">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jordan Kicks. Projeto Acadêmico HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>

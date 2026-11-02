@@ -1,8 +1,7 @@
 ## Atividade 3 - HTML e CSS: Layout
 
 # Participantes:
-Enzo Bombardelli e Silva
-Kauan Petrilho
+Enzo Bombardelli e Kauan Petrilho
 
 # LabyrinKx.BR - Loja de Sneakers 👟
 

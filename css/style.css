@@ -244,12 +244,11 @@ a {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 .CardsTenis:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
 }
 
 .ImagensTenis {
@@ -266,11 +265,6 @@ a {
     max-height: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
-    transition: transform 0.5s;
-}
-
-.CardsTenis:hover .ImagensTenis img {
-    transform: scale(1.05);
 }
 
 .BotaFavoritar {

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - LabyrinKx.BR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+</head>
+<body>
+
+    <iframe class="FundoCarrinho" src="index.html" title="Loja" aria-hidden="true" tabindex="-1"></iframe>
+    <a href="index.html" class="cart-overlay" aria-label="Fechar sacola"></a>
+
+    <section class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="titulo-carrinho">
+        
+        <div class="headerCarrinho">
+            <h2 id="titulo-carrinho">Minha sacola (<span class="ContagemItens">3</span>)</h2>
+            <a href="index.html" class="BotaoFechar" aria-label="Fechar sacola"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <div class="ItensCarrinho">
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
+                <img src="imagens/nike-dunk-white-black.webp" alt="Tênis Nike Dunk Panda">
+                <div class="InformacoesItem">
+                    <h3>Nike Dunk Low Panda</h3>
+                    <p>TAMANHO: <span>39</span></p>
+                    <div class="PrecosItem">
+                        <span class="PrecoAntigo">R$ 999,90</span>
+                        <span class="PrecoNovo">R$ 599,94</span>
+                    </div>
+                </div>
+                <div class="Quantidade">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
+                <img src="imagens/jordan-1-travis-scott.webp" alt="Jordan 1 Low Travis Scott">
+                <div class="InformacoesItem">
+                    <h3>Jordan 1 Retro Low OG SP Travis Scott Velvet Brown</h3>
+                    <p>TAMANHO: <span>45</span></p>
+                    <div class="PrecosItem">
+                        <span class="PrecoNovo">R$ 1.099,90</span>
+                    </div>
+                </div>
+                <div class="Quantidade">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+
+            <div class="ItemCarrinho">
+                <button class="BotaoRemover"><i class="fa-solid fa-xmark"></i></button>
+                <img src="imagens/birkenstock-boston.webp" alt="Birkenstock Boston Soft">
+                <div class="InformacoesItem">
+                    <h3>Birkenstock Boston Soft Footbed Suede</h3>
+                    <p>TAMANHO: <span>38</span></p>
+                    <div class="PrecosItem">
+                        <span class="PrecoNovo">R$ 999,90</span>
+                    </div>
+                </div>
+                <div class="Quantidade">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerCarrinho">
+            <p class="FreteGratis">Parabéns, você ganhou <span>FRETE GRÁTIS!</span></p>
+
+            <div class="LinhaTotal">
+                <span class="FraseTotal">Subtotal</span>
+                <span class="NumeroTotal">R$ 2.699,74</span>
+            </div>
+
+            <button class="BotaoFinalizarCompra" type="button">Finalizar compra</button>
+        </div>
+    </section>
+
+</body>
+</html>
